@@ -64,9 +64,21 @@
 
 
 
-        <!--        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#quickOrder">-->
-        <!--            Быстрый заказ-->
-        <!--        </button>-->
+        <button data-modal="senDocModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Добавить описание
+        </button>
+        <button data-modal="senDocModal2" style="border: 2px solid #000;margin-bottom: 20px;">
+            Добавить описание 2
+        </button>
+        <button data-modal="senDocModal3" style="border: 2px solid #000;margin-bottom: 20px;">
+            Добавить описание 3
+        </button>
+        <button data-modal="payModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Оплата товара
+        </button>
+        <button data-modal="medalModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Список орденов и медалей
+        </button>
 
     </div>
 
@@ -76,16 +88,356 @@
 
 
 
-    <div class="modal" id="Modal">
+    <div class="modal" id="senDocModal">
         <div class="modal__bg modal-bg _close-modal"></div>
         <div class="modal__dialog">
-            <div class="modal__top">
-                <div class="text32 medium-text">
-                    Title
+            <button class="modal__close _close-modal">
+                <img class="_view1" src="img/close2.svg" alt="">
+                <img class="_view2" src="img/back.svg" alt="">
+                <span class="_view2">Вернуться</span>
+            </button>
+            <div class="modal__title">
+                Добавить описание
+            </div>
+
+            <form action="" class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="file-input">
+                        <img src="img/file.svg" alt="" class="file-input__img">
+                        <div class="file-input__text">
+                            <div class="file-input__title text18 bold-text">
+                                Загрузите документ
+                            </div>
+                            <div class="file-input__desc text14 opacity-70">
+                                Перетащите со своего пк фаил в формате: PDF, <br> Jpeg, PNG фаил должен весить не более 10 мб
+                            </div>
+                        </div>
+                        <button class="file-input__btn">
+                            <span>Загрузить документ </span>
+                            <img src="img/plus3.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="fg fg-dynamic _full">
+                        <input type="text">
+                        <label>Название документа</label>
+                    </div>
+                    <div class="fg fg-dynamic _full">
+                        <textarea></textarea>
+                        <label>Описание к документу</label>
+                    </div>
                 </div>
-                <button class="close-btn _close-modal">
-                    <img src="img/close.svg" alt="">
-                </button>
+                <div class="modal-form__bottom">
+                    <button disabled class="m-btn m-btn-medium m-btn-brown">
+                        <span>Добавить документ</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="senDocModal2">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="modal__close _close-modal">
+                <img class="_view1" src="img/close2.svg" alt="">
+                <img class="_view2" src="img/back.svg" alt="">
+                <span class="_view2">Вернуться</span>
+            </button>
+            <div class="modal__title">
+                Добавить описание
+            </div>
+
+            <form action="" class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="file-input _error">
+                        <img src="img/file.svg" alt="" class="file-input__img">
+                        <div class="file-input__text">
+                            <div class="file-input__title text18 bold-text">
+                                Не подходящий фаил
+                            </div>
+                            <div class="file-input__desc text14 opacity-70">
+                                Ошибка загрузки файла, К размещению подходят фото со следующими параметрами: Форматы: jpg, jpeg, png. Максимальный размер 1200х1600px, минимальный 400х600px. Вес изображения не более 10мб
+                            </div>
+                        </div>
+                        <button class="file-input__btn">
+                            <span>Загрузить документ </span>
+                            <img src="img/plus3.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="fg fg-dynamic _error _full">
+                        <input type="text">
+                        <label>Название документа</label>
+                    </div>
+                    <div class="fg fg-dynamic _full">
+                        <textarea></textarea>
+                        <label>Описание к документу</label>
+                    </div>
+                </div>
+                <div class="modal-form__bottom">
+                    <button disabled class="m-btn m-btn-medium m-btn-brown">
+                        <span>Добавить документ</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="senDocModal3">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="modal__close _close-modal">
+                <img class="_view1" src="img/close2.svg" alt="">
+                <img class="_view2" src="img/back.svg" alt="">
+                <span class="_view2">Вернуться</span>
+            </button>
+            <div class="modal__title">
+                Добавить описание
+            </div>
+
+            <form action="" class="modal-form">
+                <div class="modal-form__fields">
+                    <div class="file-input">
+                        <img src="img/doc5.webp" alt="" class="file-input__img">
+                        <div class="file-input__text">
+                            <div class="file-input__title text18 bold-text">
+                                af6zI5pwlsA.jpeg
+                            </div>
+                        </div>
+                        <div class="file-input__nav">
+                            <button class="file-input__change">
+                                Заменить документ
+                            </button>
+                            <button class="file-input__delete">
+                                Удалить
+                            </button>
+                        </div>
+                    </div>
+                    <div class="fg fg-dynamic _full">
+                        <input type="text">
+                        <label>Название документа</label>
+                    </div>
+                    <div class="fg fg-dynamic _full">
+                        <textarea></textarea>
+                        <label>Описание к документу</label>
+                    </div>
+                </div>
+                <div class="modal-form__bottom">
+                    <button class="m-btn m-btn-medium m-btn-brown">
+                        <span>Добавить документ</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="payModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="modal__close _close-modal">
+                <img class="_view1" src="img/close2.svg" alt="">
+                <img class="_view2" src="img/back.svg" alt="">
+                <span class="_view2">Вернуться</span>
+            </button>
+            <div class="modal__title2 h2">
+                Оплата товара
+            </div>
+
+
+            <form action="" class="pay-form">
+                <div class="pay-form__group">
+                    <div class="pay-form__title text24 bold-text opacity-70">
+                        Адрес доставки
+                    </div>
+                    <div class="pay-form__fields">
+                        <div class="fg fg-dynamic">
+                            <input type="text">
+                            <label>Страна</label>
+                        </div>
+                        <div class="fg fg-dynamic">
+                            <input type="text">
+                            <label>Город</label>
+                        </div>
+                        <div class="fg fg-dynamic _full">
+                            <input type="text">
+                            <label>Адрес доставки (улица, дом, № подъезда, квартира)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="pay-form__group">
+                    <div class="pay-form__title text24 bold-text opacity-70">
+                        Контакты
+                    </div>
+                    <div class="pay-form__fields">
+                        <div class="fg fg-dynamic _full">
+                            <input type="text">
+                            <label>Ваш телефон</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="pay-form__bottom">
+                    <div class="pay-form__hint">
+                        Принятия <a href="">условии договора</a>
+                    </div>
+                    <div class="m-check">
+                        <input type="checkbox">
+                        <label>
+                            <span>Принимаю условия</span>
+                        </label>
+                    </div>
+                    <button class="pay-form__btn m-btn m-btn-medium m-btn-brown">
+                        <span>Перейти к оплате</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal medal-modal" id="medalModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="modal__close _close-modal">
+                <img class="_view1" src="img/close2.svg" alt="">
+                <img class="_view2" src="img/back.svg" alt="">
+                <span class="_view2">Вернуться</span>
+            </button>
+            <div class="modal__title">
+                Список орденов и медалей
+            </div>
+
+            <div class="medal-modal__inner">
+                <div class="medal-modal__search">
+                    <div class="fg">
+                        <input type="text" placeholder="Введите название медали">
+                    </div>
+                </div>
+                <div class="medal-modal__content">
+                    <div class="medal-modal__items">
+                        <div data-img-src="img/medal.webp" class="medal-modal__item m-check">
+                            <input type="checkbox">
+                            <label>
+                                <span>Медаль «XX лет Рабоче-Крестьянской Красной Армии»</span>
+                            </label>
+                        </div>
+                        <div data-img-src="img/medal2.webp" class="medal-modal__item m-check">
+                            <input type="checkbox">
+                            <label>
+                                <span>Медаль “За отвагу”</span>
+                            </label>
+                        </div>
+                        <div data-img-src="img/medal3.webp" class="medal-modal__item m-check">
+                            <input type="checkbox">
+                            <label>
+                                <span>Медаль “За боевые заслуги”</span>
+                            </label>
+                        </div>
+                        <div data-img-src="img/medal4.webp" class="medal-modal__item m-check">
+                            <input type="checkbox">
+                            <label>
+                                <span>Медаль “За трудовую доблесть”</span>
+                            </label>
+                        </div>
+                        <div data-img-src="img/medal5.webp" class="medal-modal__item m-check">
+                            <input type="checkbox">
+                            <label>
+                                <span>Медаль “За трудовое отличие”</span>
+                            </label>
+                        </div>
+                        <div data-img-src="img/medal6.webp" class="medal-modal__item m-check">
+                            <input type="checkbox">
+                            <label>
+                                <span>Медаль “Золотая звезда”</span>
+                            </label>
+                        </div>
+                        <div data-img-src="img/medal.webp" class="medal-modal__item m-check">
+                            <input type="checkbox">
+                            <label>
+                                <span>Медаль “Серп и молот”</span>
+                            </label>
+                        </div>
+                        <div data-img-src="img/medal2.webp" class="medal-modal__item m-check">
+                            <input type="checkbox">
+                            <label>
+                                <span>Медаль “Серп и молот”</span>
+                            </label>
+                        </div>
+                        <div data-img-src="img/medal3.webp" class="medal-modal__item m-check">
+                            <input type="checkbox">
+                            <label>
+                                <span>Медаль “Серп и молот”</span>
+                            </label>
+                        </div>
+                        <div data-img-src="img/medal4.webp" class="medal-modal__item m-check">
+                            <input type="checkbox">
+                            <label>
+                                <span>Медаль “Серп и молот”</span>
+                            </label>
+                        </div>
+                        <div data-img-src="img/medal5.webp" class="medal-modal__item m-check">
+                            <input type="checkbox">
+                            <label>
+                                <span>Медаль “Серп и молот”</span>
+                            </label>
+                        </div>
+                        <div data-img-src="img/medal6.webp" class="medal-modal__item m-check">
+                            <input type="checkbox">
+                            <label>
+                                <span>Медаль “Серп и молот”</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="medal-modal__img">
+                        <div class="medal-card__img">
+                            <img src="img/medal.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="doc-field__uploaded">
+                    <div class="uploaded-medal">
+                        <div class="uploaded-medal__title">Медаль “За оборону Ленинграда”</div>
+                        <button class="uploaded-medal__remove">
+                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.99997 1.50003L1 9.5M0.999966 1.5L8.99993 9.49997" stroke="#1C274C" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="uploaded-medal">
+                        <div class="uploaded-medal__title">Медаль “Серп и молот”</div>
+                        <button class="uploaded-medal__remove">
+                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.99997 1.50003L1 9.5M0.999966 1.5L8.99993 9.49997" stroke="#1C274C" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="uploaded-medal">
+                        <div class="uploaded-medal__title">Медаль “За оборону Ленинграда”</div>
+                        <button class="uploaded-medal__remove">
+                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.99997 1.50003L1 9.5M0.999966 1.5L8.99993 9.49997" stroke="#1C274C" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="uploaded-medal">
+                        <div class="uploaded-medal__title">Медаль “Золотая звезда”</div>
+                        <button class="uploaded-medal__remove">
+                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.99997 1.50003L1 9.5M0.999966 1.5L8.99993 9.49997" stroke="#1C274C" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="uploaded-medal">
+                        <div class="uploaded-medal__title">Медаль “За оборону Севастополя”</div>
+                        <button class="uploaded-medal__remove">
+                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.99997 1.50003L1 9.5M0.999966 1.5L8.99993 9.49997" stroke="#1C274C" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="medal-modal__nav">
+                    <button class="medal-modal__btn m-btn m-btn-medium m-btn-brown">
+                        <span>Добавить медали</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
